@@ -12,7 +12,9 @@ export const Menu = ({menuItems, color}: MenuPropsTypes) => {
        <ul>
          {
            menuItems.map((menu, index) => (
-              <li key={index}><a href="">{menu}</a></li>
+              <li key={index}>
+                <a href={"#"}>{menu}</a>
+              </li>
            ))
          }
        </ul>
@@ -23,10 +25,13 @@ export const Menu = ({menuItems, color}: MenuPropsTypes) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
+    justify-content: center;
     column-gap: 2rem;
   }
 
+
   li {
-    color: ${({color}) => color || 'rgba(31, 31, 32, 1)'}
+    color: ${({color}) => color || 'rgba(31, 31, 32, 1)'};
+    text-transform: uppercase;
   }
 `

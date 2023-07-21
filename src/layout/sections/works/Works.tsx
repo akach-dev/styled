@@ -2,8 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/Title";
 import {Menu} from "../../../components/menu/Menu";
+import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Work} from "./work/Work";
+import social from '../../../assets/images/social.webp'
+import timer from '../../../assets/images/timer.webp'
 
-const workItwms = [
+
+const workItems = [
   "All", 'landing page', 'React', 'spa'
 ]
 
@@ -11,7 +16,19 @@ export const Works = () => {
   return (
      <StyledWorks>
        <Title>My Works</Title>
-       <Menu menuItems={workItwms} color={'#fff'}/>
+
+       <Menu menuItems={workItems} color={'#fff'}/>
+
+       <FlexWrapper justify={'space-between'}>
+         <Work
+            src={social}
+            title={'Social Network'}
+            text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}/>
+         <Work
+            src={timer}
+            title={'Timer'}
+            text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim'}/>
+       </FlexWrapper>
      </StyledWorks>
   );
 };
@@ -22,6 +39,11 @@ const StyledWorks = styled.section`
 
   h2:not(:last-child) {
     margin-bottom: 2.25em;
+
+  }
+
+  nav:not(:last-child) {
+    margin-bottom: 3.5em;
 
   }
 `

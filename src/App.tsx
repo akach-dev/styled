@@ -5,6 +5,7 @@ import {Hero} from "./layout/sections/hero/Hero";
 import {Wrapper} from "./components/Wrapper";
 import {Skills} from "./layout/sections/skills/Skills";
 import {Works} from "./layout/sections/works/Works";
+import {Testimony} from "./layout/sections/testimony/Testimony";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
          <Hero/>
          <Skills/>
          <Works/>
+         <Testimony/>
        </main>
      </Wrapper>
 
