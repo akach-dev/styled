@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuPropsTypes = {
+  menuItems: string[]
+  color?: string
+}
+
+export const Menu = ({menuItems, color}: MenuPropsTypes) => {
   return (
-     <StyledMenu>
+     <StyledMenu color={color}>
        <ul>
-         <li><a href="">Home</a></li>
-         <li><a href="">Skills</a></li>
-         <li><a href="">Works</a></li>
-         <li><a href="">Testimony</a></li>
-         <li><a href="">Contact</a></li>
+         {
+           menuItems.map((menu, index) => (
+              <li key={index}><a href="">{menu}</a></li>
+           ))
+         }
        </ul>
      </StyledMenu>
   );
@@ -19,5 +24,9 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     column-gap: 2rem;
+  }
+
+  li {
+    color: ${({color}) => color || 'rgba(31, 31, 32, 1)'}
   }
 `
