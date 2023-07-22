@@ -7,4 +7,5 @@ export const Button = styled.button`
   align-self: center;
   background-color: transparent;
   color: #fff;
+  cursor: pointer;
 `
