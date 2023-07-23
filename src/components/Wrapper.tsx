@@ -5,6 +5,4 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow: auto;
-  //display: grid;
-  //grid-template-rows: auto 1fr auto;
 `
