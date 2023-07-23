@@ -70,7 +70,7 @@ const ListItem = styled.li`
     z-index: 1;
     transform: scale(0);
     transition: all 0.3s ease 0s;
-    
+
   }
 
   &:hover {
