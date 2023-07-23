@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Container} from '../../components/Container';
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
 
@@ -9,17 +10,23 @@ const headerItems = [
 
 export const Header = () => {
   return (
+
      <StyledHeader>
-       <Logo/>
-       <Menu menuItems={headerItems}/>
+       <HeaderContainer>
+         <Logo/>
+         <Menu menuItems={headerItems}/>
+       </HeaderContainer>
      </StyledHeader>
+
   );
 };
 
 const StyledHeader = styled.header`
   background-color: #73f5d0;
+  padding: 5px 0;
+`
+const HeaderContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px 15px;
+  justify-content: space-between;
 `
