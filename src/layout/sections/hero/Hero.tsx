@@ -28,20 +28,33 @@ const StyledHero = styled.section`
   padding-top: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
   padding-bottom: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
 
-  //padding: calc(80px + (180 - 20) * ((100vw - 320px) / (1170 - 320))) 0;
   & *:not(:last-child) {
     margin-bottom: 10px;
   }
+`
+const HeroBody = styled.div`
+  padding-right: 30px;
 `
 const HeroContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-`
-const HeroBody = styled.div`
 
+  @media (max-width: 770px) {
+    flex-direction: column;
+
+    ${HeroBody} {
+      text-align: center;
+      padding-right: 0;
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: calc(65px + (100 - 65) * ((100vw - 770px) / (600 - 3200)));
+    }
+
+  }
 `
+
 
 const HeroImg = styled.div`
   position: relative;
