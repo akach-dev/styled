@@ -24,6 +24,10 @@ export const Hero = () => {
 
 const StyledHero = styled.section`
   min-height: 100vh;
+
+  padding-top: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
+  padding-bottom: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
+
   //padding: calc(80px + (180 - 20) * ((100vw - 320px) / (1170 - 320))) 0;
   & *:not(:last-child) {
     margin-bottom: 10px;
@@ -33,10 +37,8 @@ const HeroContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //padding: calc(80px + (180 - 20) * ((100vw - 320px) / (1170 - 320))) 0px;
-
+  
 `
-
 const HeroBody = styled.div`
 
 `
@@ -52,7 +54,6 @@ const HeroImg = styled.div`
     border: 5px solid #7572D5;
     width: 370px;
     height: 480px;
-
   }
 `
 
