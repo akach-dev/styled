@@ -10,7 +10,6 @@ const headerItems = [
 
 export const Header = () => {
   return (
-
      <StyledHeader>
        <HeaderContainer>
          <Logo/>
