@@ -1,35 +1,44 @@
 import React from 'react';
 import hero from "../../../assets/images/photo.webp"
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
+import {Container} from "../../../components/Container";
 
 export const Hero = () => {
   return (
      <StyledHero>
-       <FlexWrapper direction={'column'} align={'flex-start'}>
-         <HeroHi>Hi There</HeroHi>
-         <HeroTitle>I am Svetlana Dyablo</HeroTitle>
-         <HeroSubTitle>A Web Developer. </HeroSubTitle>
-       </FlexWrapper>
-       <HeroImg>
-         <Img src={hero} alt="my img"/>
-       </HeroImg>
+       <HeroContainer>
+
+         <HeroBody>
+           <HeroHi>Hi There</HeroHi>
+           <HeroTitle>I am Svetlana Dyablo</HeroTitle>
+           <HeroSubTitle>A Web Developer. </HeroSubTitle>
+         </HeroBody>
+
+         <HeroImg>
+           <Img src={hero} alt="my img"/>
+         </HeroImg>
+       </HeroContainer>
      </StyledHero>
   );
 };
 
 const StyledHero = styled.section`
-  //min-height: 100vh;
-  color: #fff;
-  background: #1F1F20;
-  padding: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+  min-height: 100vh;
+  //padding: calc(80px + (180 - 20) * ((100vw - 320px) / (1170 - 320))) 0;
   & *:not(:last-child) {
     margin-bottom: 10px;
   }
+`
+const HeroContainer = styled(Container)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //padding: calc(80px + (180 - 20) * ((100vw - 320px) / (1170 - 320))) 0px;
+
+`
+
+const HeroBody = styled.div`
+
 `
 
 const HeroImg = styled.div`
@@ -52,7 +61,6 @@ const Img = styled.img`
   height: 430px;
   object-fit: cover;
   position: relative;
-
 `
 
 const HeroHi = styled.span`
