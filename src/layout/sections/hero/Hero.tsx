@@ -2,45 +2,49 @@ import React from 'react';
 import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const Hero = () => {
   return (
      <StyledHero>
        <HeroContainer>
+         <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
+           <HeroBody>
+             <HeroHi>Hi There</HeroHi>
+             <HeroTitle>I am <span>Svetlana Dyablo</span></HeroTitle>
+             <HeroSubTitle>A Web Developer. </HeroSubTitle>
+           </HeroBody>
 
-         <HeroBody>
-           <HeroHi>Hi There</HeroHi>
-           <HeroTitle>I am <span>Svetlana Dyablo</span></HeroTitle>
-           <HeroSubTitle>A Web Developer. </HeroSubTitle>
-         </HeroBody>
-
-         <HeroImg>
-           <Img src={hero} alt="my img"/>
-         </HeroImg>
+           <HeroImg>
+             <Img src={hero} alt="my img"/>
+           </HeroImg>
+         </FlexWrapper>
        </HeroContainer>
      </StyledHero>
   );
 };
 
+const HeroContainer = styled(Container)`
+  height: 100%;
+  //display: flex;
+  border: 2px solid cadetblue;
+
+  align-items: center;
+`
+
 const StyledHero = styled.section`
-  min-height: 100vh;
-  display: flex;
+  height: 100vh;
+
+
   //padding-top: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
   //padding-bottom: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
   /*  & *:not(:last-child) {
       margin-bottom: 10px;
     }*/
 `
-const HeroContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border: 2px solid cadetblue;
-`
+
 const HeroImg = styled.div`
-  width: 350px;
-  height: 430px;
   position: relative;
 
   &::before {
@@ -54,14 +58,13 @@ const HeroImg = styled.div`
   }
 `
 const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  min-width: 350px;
+  width: 350px;
+  height: 430px;
   object-fit: cover;
 `
 const HeroBody = styled.div`
   padding-right: 30px;
-  max-width: 700px;
+  max-width: 300px;
 
   & *:not(:last-child) {
     margin-bottom: 10px;
@@ -73,12 +76,26 @@ const HeroHi = styled.span`
 `
 const HeroTitle = styled.h3`
   font-family: Josefin Sans, sans-serif;
-  font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
+  //font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
   font-weight: 700;
   letter-spacing: 0.05em;
 
+
   span {
     color: cadetblue;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      height: 20px;
+      width: 100%;
+      background-color: ${theme.colors.accent};
+    }
   }
 `
 const HeroSubTitle = styled.h1`
