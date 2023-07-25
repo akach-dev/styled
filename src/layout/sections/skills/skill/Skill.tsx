@@ -21,20 +21,16 @@ export const Skill = ({iconId, title, children}: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  flex: 1 0 33.33%;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 30px 20px 40px;
+  padding: 30px 0 40px;
   color: #FFF;
+  text-align: center;
 
   svg:not(:last-child) {
     margin-bottom: 40px;
   }
 `
 const SkillTitle = styled.h4`
+  font-family: Josefin Sans, sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
 

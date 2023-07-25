@@ -45,6 +45,10 @@ export const GlobalStyled = createGlobalStyle`
 
   section {
     padding: 100px 0;
+
+    h2:not(:last-child) {
+      margin-bottom: 2.25em;
+    }
   }
 
   section:nth-of-type(odd) {
