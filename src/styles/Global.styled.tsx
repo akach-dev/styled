@@ -75,12 +75,10 @@ export const GlobalStyled = createGlobalStyle`
 
   body,
   html {
-    //height: 100%;
     line-height: 1;
   }
 
   main {
-    flex: 1 1 auto;
     background-color: antiquewhite;
   }
 

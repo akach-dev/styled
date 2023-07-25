@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Title} from "../../../components/Title";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
