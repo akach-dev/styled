@@ -43,6 +43,10 @@ export const GlobalStyled = createGlobalStyle`
     border: none;
   }
 
+  section {
+    padding: 100px 0;
+  }
+
   section:nth-of-type(odd) {
     background-color: ${theme.colors.primaryBg};
   }
@@ -67,7 +71,7 @@ export const GlobalStyled = createGlobalStyle`
 
   body,
   html {
-    height: 100%;
+    //height: 100%;
     line-height: 1;
   }
 
