@@ -22,7 +22,7 @@ export const Skill = ({iconId, title, children}: SkillPropsType) => {
   );
 };
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   position: relative;
 
   &:not(:last-child) {
