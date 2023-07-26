@@ -79,6 +79,7 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   main {
+    flex-grow: 1;
     background-color: antiquewhite;
   }
 

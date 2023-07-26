@@ -3,40 +3,37 @@ import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 
 export const Hero = () => {
   return (
      <StyledHero>
        <HeroContainer>
-         <FlexWrapper justify={'space-between'} align={'center'} wrap={'wrap'}>
-           <HeroBody>
-             <HeroHi>Hi There</HeroHi>
-             <HeroTitle>I am <span>Svetlana Dyablo</span></HeroTitle>
-             <HeroSubTitle>A Web Developer. </HeroSubTitle>
-           </HeroBody>
 
-           <HeroImg>
-             <Img src={hero} alt="my img"/>
-           </HeroImg>
-         </FlexWrapper>
+         <HeroBody>
+           <HeroHi>Hi There</HeroHi>
+           <HeroTitle>I am <span>Svetlana Dyablo</span></HeroTitle>
+           <HeroSubTitle>A Web Developer. </HeroSubTitle>
+         </HeroBody>
+
+         <HeroImg>
+           <Img src={hero} alt="my img"/>
+         </HeroImg>
+
        </HeroContainer>
      </StyledHero>
   );
 };
 
 const HeroContainer = styled(Container)`
-  height: 100%;
-  //display: flex;
-  border: 2px solid cadetblue;
-
+  display: flex;
+  width: 100%;
   align-items: center;
+  border: 2px solid cadetblue;
 `
 
 const StyledHero = styled.section`
   height: 100vh;
-
-
+  display: flex;
   //padding-top: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
   //padding-bottom: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
   /*  & *:not(:last-child) {
@@ -46,6 +43,9 @@ const StyledHero = styled.section`
 
 const HeroImg = styled.div`
   position: relative;
+  flex: 0 0 350px;
+  height: 430px;
+
 
   &::before {
     content: '';
@@ -58,13 +58,14 @@ const HeroImg = styled.div`
   }
 `
 const Img = styled.img`
-  width: 350px;
-  height: 430px;
+  max-width: 100%;
+  height: 100%;
   object-fit: cover;
 `
 const HeroBody = styled.div`
+  flex: 1 1 auto;
   padding-right: 30px;
-  max-width: 300px;
+
 
   & *:not(:last-child) {
     margin-bottom: 10px;
