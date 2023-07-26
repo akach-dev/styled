@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "../../../../components/Link";
 
 type WorkPropsType = {
   src: string
@@ -12,8 +13,8 @@ export const Work = ({src, text, title}: WorkPropsType) => {
      <StyledWork>
        <Image src={src} alt={'work img'}/>
        <Body>
-         <Title>{title}</Title>
-         <Text>{text}</Text>
+         <h3>{title}</h3>
+         <p>{text}</p>
          <Link href={'#'}>demo</Link>
          <Link href={'#'}>Code</Link>
        </Body>
@@ -23,6 +24,7 @@ export const Work = ({src, text, title}: WorkPropsType) => {
 
 const StyledWork = styled.div`
   max-width: 540px;
+
 `
 const Image = styled.img`
   width: 100%;
@@ -37,19 +39,16 @@ const Body = styled.div`
   & > :not(:last-child) {
     margin-bottom: 15px;
   }
-`
 
-const Title = styled.h3`
-  font-weight: 700;
-  letter-spacing: 1px;
-`
-const Text = styled.p`
-  font-size: 0.875rem;
-`
-const Link = styled.a`
-  text-transform: uppercase;
-
-  &:not(:last-child) {
+  a:not(:last-child) {
     margin-right: 1.5em;
   }
+
+  a::before {
+    left: 0;
+    right: 0;
+  }
 `
+
+
+

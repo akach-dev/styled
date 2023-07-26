@@ -34,6 +34,7 @@ export const GlobalStyled = createGlobalStyle`
     text-decoration: none;
   }
 
+ 
   a:hover {
     text-decoration: none;
   }
@@ -67,6 +68,18 @@ export const GlobalStyled = createGlobalStyle`
   h6 {
     font-weight: inherit;
     font-size: inherit;
+  }
+
+  h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: Josefin Sans, sans-serif;
+  }
+
+
+  p {
+    font-size: 0.875rem;
+
   }
 
   img {
