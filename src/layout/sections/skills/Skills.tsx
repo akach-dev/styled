@@ -58,6 +58,5 @@ const StyledSkills = styled.section`
 const StyledSkillsContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  //grid-auto-rows: minmax(auto, 1fr);
   column-gap: 40px;
 `
