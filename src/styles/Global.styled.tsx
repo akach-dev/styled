@@ -34,7 +34,7 @@ export const GlobalStyled = createGlobalStyle`
     text-decoration: none;
   }
 
- 
+
   a:hover {
     text-decoration: none;
   }
@@ -42,6 +42,10 @@ export const GlobalStyled = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    color: ${theme.colors.font};
+    cursor: pointer;
+    width: 170px;
+    height: 32px;
   }
 
   section {
@@ -79,7 +83,7 @@ export const GlobalStyled = createGlobalStyle`
 
   p {
     font-size: 0.875rem;
-
+    line-height: 1.4;
   }
 
   img {
