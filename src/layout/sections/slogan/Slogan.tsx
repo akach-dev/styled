@@ -15,11 +15,5 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-  background: #252527;
-  padding: 100px 150px;
   text-align: center;
-
-  h2:not(:last-child) {
-    margin-bottom: 2.25em;
-  }
 `
