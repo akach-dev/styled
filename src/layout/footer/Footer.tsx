@@ -70,7 +70,7 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 
   @media (any-hover: hover) {
     &:hover {
@@ -82,8 +82,6 @@ const SocialLink = styled.a`
       }
     }
   }
-
-
 `
 const Copyright = styled.small`
   opacity: 0.5;
