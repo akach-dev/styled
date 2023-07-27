@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
+import {theme} from "../../styles/Theme";
 
 export const Footer = () => {
+
   return (
      <StyledFooter>
        <Name>Svetlana</Name>
@@ -14,7 +16,7 @@ export const Footer = () => {
          </SocialItem>
          <SocialItem>
            <SocialLink>
-             <Icon width={'21px'} height={'21px'} viewBox={'0 0 21 21'} iconId={'tg'}/>
+             <Icon width={'21px'} height={'21px'} viewBox={'0 0 21 21'} iconId={'telegram'}/>
            </SocialLink>
          </SocialItem>
          <SocialItem>
@@ -37,23 +39,21 @@ export const Footer = () => {
 
 
 const StyledFooter = styled.footer`
-  background: #1F1F20;
-  min-width: 200px;
+  background: ${theme.colors.primaryBg};
   padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   & > *:not(:last-child) {
     margin-bottom: 2em;
   }
 `
 const Name = styled.span`
-  color: #FFF;
   letter-spacing: 3px;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375rem;
+  font-family: Josefin Sans, sans-serif;
 `
 const SocialList = styled.ul`
   display: flex;
@@ -61,14 +61,32 @@ const SocialList = styled.ul`
 `
 const SocialItem = styled.li`
 
-
 `
 const SocialLink = styled.a`
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: ${theme.colors.accent};
+      transform: translateY(-4px);
+
+      svg {
+        color: ${theme.colors.primaryBg};
+      }
+    }
+  }
 
 
 `
 const Copyright = styled.small`
-  color: rgba(255, 255, 255, 0.50);
+  opacity: 0.5;
   font-size: 0.75rem;
 `
 

@@ -27,6 +27,7 @@ export const GlobalStyled = createGlobalStyle`
 
   a {
     color: inherit;
+    cursor: pointer;
   }
 
   a,
@@ -34,6 +35,9 @@ export const GlobalStyled = createGlobalStyle`
     text-decoration: none;
   }
 
+  svg {
+    color: ${theme.colors.accent};
+  }
 
   a:hover {
     text-decoration: none;
