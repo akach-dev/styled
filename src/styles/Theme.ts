@@ -10,6 +10,7 @@ export const theme = {
     placeholderColor: '#495057',
   },
   media: {
+    container: `screen and (max-width: ${em(1170)}em)`,
     tablet: `screen and (max-width: ${em(767.98)}em)`,
     mobile: `screen and (max-width: ${em(576)}em)`
   }

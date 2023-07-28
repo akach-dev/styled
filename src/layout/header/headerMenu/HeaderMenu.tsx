@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {adaptiveValue} from "../../../assets/adaptiveValue";
+
 
 type MenuPropsTypes = {
   menuItems: string[]
@@ -96,7 +98,9 @@ const Link = styled.a`
   font-weight: 400;
   line-height: 1.1; /* 110% */
   color: transparent;
-  font-size: 1.5rem;
-
+  font-size: 40px;
+  @media ${theme.media.container} and (min-width: 800px) {
+    font-size: ${adaptiveValue(40, 20, 1170, 800)};
+  }
 `
 
