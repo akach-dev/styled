@@ -9,10 +9,10 @@ type MenuPropsTypes = {
 export const MobileMenu = ({menuItems}: MenuPropsTypes) => {
   return (
      <StyledMobileMenu>
-       <BurgerButton isOpen={true}>
+       <BurgerButton isOpen={false}>
          <span></span>
        </BurgerButton>
-       <Popup isOpen={true}>
+       <Popup isOpen={false}>
          <ul>
            {
              menuItems.map((menu, index) => (
@@ -67,10 +67,11 @@ const Popup = styled.div<{ isOpen: boolean }>`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top: -100px;
+  top: -115px;
   right: -100px;
   width: 200px;
   height: 200px;
+  z-index: 101;
 
   span {
     display: block;
