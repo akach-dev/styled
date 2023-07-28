@@ -70,13 +70,11 @@ const ListItem = styled.li`
     z-index: 1;
     transform: scale(0);
     transition: all 0.3s ease 0s;
-
   }
 
   &:hover {
     &::before {
       transform: scale(1);
-
     }
 
     ${Mask} {
@@ -91,9 +89,10 @@ const ListItem = styled.li`
 `
 const Link = styled.a`
   font-family: 'Josefin Sans', 'sans-serif';
-  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.1; /* 110% */
   color: transparent;
+  font-size: 1.5rem;
+
 `
 
