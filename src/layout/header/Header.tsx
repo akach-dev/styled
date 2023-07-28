@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Container} from '../../components/Container';
 import {Logo} from "../../components/logo/Logo";
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 const headerItems = [
   'Home', 'Skills', 'Works', 'Testimony', 'Contact'
@@ -14,6 +15,7 @@ export const Header = () => {
        <HeaderContainer>
          <Logo/>
          <HeaderMenu menuItems={headerItems}/>
+         <MobileMenu menuItems={headerItems}/>
        </HeaderContainer>
      </StyledHeader>
   );

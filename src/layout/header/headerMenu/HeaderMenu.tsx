@@ -35,6 +35,10 @@ const StyledHeaderMenu = styled.nav`
     justify-content: center;
     column-gap: 2rem;
   }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 const Mask = styled.span`
   position: absolute;
