@@ -3,7 +3,7 @@ import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
-import {adaptive, font} from "../../../assets/adaptiveValue";
+import {adaptiveValue, font} from "../../../assets/adaptiveValue";
 
 export const Hero = () => {
   return (
@@ -34,8 +34,8 @@ const HeroImg = styled.div`
   position: relative;
   width: 350px;
   //flex-shrink: 0;
-  ${adaptive({value: 'width', Fmin: 310, Fmax: 350, vMin: 360, vMax: 1170})}
-  ${adaptive({value: 'height', Fmin: 380, Fmax: 430, vMin: 360, vMax: 1170})}
+  ${adaptiveValue({value: 'width', Fmin: 310, Fmax: 350, vMin: 360, vMax: 1170})}
+  ${adaptiveValue({value: 'height', Fmin: 380, Fmax: 430, vMin: 360, vMax: 1170})}
   &::before {
     content: '';
     position: absolute;

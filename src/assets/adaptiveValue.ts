@@ -1,13 +1,13 @@
 import {theme} from "../styles/Theme";
 
-export function adaptiveValue(fMin: number, fMax: number, vMin: number, vMax: number): string {
+/*export function adaptiveValue(fMin: number, fMax: number, vMin: number, vMax: number): string {
   const k = (fMax - fMin) / (vMax - vMin);
   const b = fMin - k * vMin;
 
   return ` calc(${k} * 100vw + ${b}px)`;
-}
+}*/
 
-type AdaptivePropsType = {
+type adaptiveValuePropsType = {
   value: string
   Fmin: number
   Fmax: number
@@ -15,7 +15,7 @@ type AdaptivePropsType = {
   vMax: number
 }
 
-export const adaptive = ({value, Fmin, Fmax, vMin, vMax}: AdaptivePropsType) => `
+export const adaptiveValue = ({value, Fmin, Fmax, vMin, vMax}: adaptiveValuePropsType) => `
     ${value}: calc( (100vw - ${vMin}px)/(${vMax} - ${vMin}) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {adaptiveValue, font} from "../../../assets/adaptiveValue";
+import {adaptiveValue} from "../../../assets/adaptiveValue";
 
 
 type MenuPropsTypes = {
@@ -95,14 +95,9 @@ const ListItem = styled.li`
   }
 `
 const Link = styled.a`
-  //font-family: 'Josefin Sans', 'sans-serif';
+  font-family: 'Josefin Sans', 'sans-serif';
   font-weight: 400;
   line-height: 1.1; /* 110% */
   color: transparent;
-  ${font({family: 'Josefin Sans, sans-serif', lineHeight: 1.1})} //
-          // font-size: 40px;
-                  // @media ${theme.media.container} and (min-width: 767.98px) {
-                  //   font-size: ${adaptiveValue(20, 40, 1170, 767.98)};
-          // }
+  ${adaptiveValue({value: 'font-size', Fmin: 20, Fmax: 30, vMin: 767.98, vMax: 1170})}
 `
-
