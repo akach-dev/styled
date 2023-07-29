@@ -2,8 +2,8 @@ import React from 'react';
 import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {adaptiveValue} from "../../../assets/adaptiveValue";
 import {Container} from "../../../components/Container";
+import {adaptive} from "../../../assets/adaptiveValue";
 
 export const Hero = () => {
   return (
@@ -42,16 +42,8 @@ const HeroContainer = styled(Container)`
 const HeroImg = styled.div`
   position: relative;
   width: 350px;
-  flex-shrink: 0;
-  height: 430px;
-  @media ${theme.media.container} {
-    height: ${
-            adaptiveValue(380, 430, 1170, 360)
-    };
-    width: ${
-            adaptiveValue(310, 350, 1170, 360)
-    };
-  }
+  //flex-shrink: 0;
+
 
   &::before {
     content: '';
@@ -62,6 +54,9 @@ const HeroImg = styled.div`
     width: 101.3%;
     height: 109%;
   }
+
+  ${adaptive({value: 'height', fMin: 310, fMax: 350, vMin: 360, vMax: 1170})}
+
 `
 const Img = styled.img`
   max-width: 100%;
