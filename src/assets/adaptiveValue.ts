@@ -20,7 +20,6 @@ export const adaptive = ({value, Fmin, Fmax, vMin, vMax}: AdaptivePropsType) => 
 `
 
 type FontPropsType = {
-  value: string
   family?: string
   weight?: number
   color?: string
@@ -29,12 +28,12 @@ type FontPropsType = {
   Fmax?: number
 }
 
-export const font = ({value, family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
-font-family: ${family || 'Popins'};
-font-weight: ${weight || 400};
+export const font = ({family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
+    font-family: ${family || 'Popins'};
+    font-weight: ${weight || 400};
     color: ${color || theme.colors.font};
     line-height: ${lineHeight || 1};
-    ${value}: calc( (100vw - 360px)/(1170 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+    font-size: calc( (100vw - 360px)/(1170 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
 
 

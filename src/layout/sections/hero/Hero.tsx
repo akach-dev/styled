@@ -27,7 +27,7 @@ export const Hero = () => {
 
 
 const StyledHero = styled.section`
-  height: 100vh;
+  min-height: 100vh;
 
 `
 const HeroImg = styled.div`
@@ -83,15 +83,14 @@ const HeroHi = styled.span`
   display: inline-block;
 `
 const HeroTitle = styled.h3`
-  ${font({family: 'Josefin Sans, sans-serif', weight: 700, Fmax: 50, Fmin: 30, value: 'font-size'})}
-    //font-family: Josefin Sans, sans-serif;
-    //font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
-    //font-weight: 700;
-    //letter-spacing: 0.05em;
+  ${font({family: 'Josefin Sans, sans-serif', weight: 700, Fmax: 50, Fmin: 30})} //font-family: Josefin Sans, sans-serif;
+  letter-spacing: 0.05em;
+
   span {
     color: cadetblue;
     position: relative;
     z-index: 1;
+    white-space: nowrap;
 
     &::after {
       content: '';
