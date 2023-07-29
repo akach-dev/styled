@@ -28,12 +28,19 @@ export const Hero = () => {
 
 const StyledHero = styled.section`
   min-height: 100vh;
-
+  display: flex;
+  ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
+`
+const HeroContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 65px;
+  align-items: center;
 `
 const HeroImg = styled.div`
   position: relative;
-  width: 350px;
-  //flex-shrink: 0;
+
   ${adaptiveValue({value: 'width', Fmin: 310, Fmax: 350, vMin: 360, vMax: 1170})}
   ${adaptiveValue({value: 'height', Fmin: 380, Fmax: 430, vMin: 360, vMax: 1170})}
   &::before {
@@ -45,21 +52,8 @@ const HeroImg = styled.div`
     width: 101.3%;
     height: 109%;
   }
-
-
-
-
-
 `
 
-const HeroContainer = styled(Container)`
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 65px;
-  align-items: center;
-`
 const Img = styled.img`
   max-width: 100%;
   height: 100%;

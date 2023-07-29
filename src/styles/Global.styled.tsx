@@ -75,7 +75,7 @@ export const GlobalStyled = createGlobalStyle`
   h5,
   h6 {
     font-weight: inherit;
-    font-size: inherit;
+    //font-size: inherit;
   }
 
   h3 {
