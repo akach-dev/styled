@@ -58,6 +58,7 @@ const Mask = styled.span`
     span {
       display: inline-block;
       transform: translateY(-50%);
+
     }
   }
 `
@@ -99,8 +100,8 @@ const Link = styled.a`
   line-height: 1.1; /* 110% */
   color: transparent;
   font-size: 40px;
-  @media ${theme.media.container} and (min-width: 800px) {
-    font-size: ${adaptiveValue(40, 20, 1170, 800)};
+  @media ${theme.media.container} and (min-width: 767.98px) {
+    font-size: ${adaptiveValue(20, 40, 1170, 767.98)};
   }
 `
 

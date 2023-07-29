@@ -2,6 +2,6 @@ export function adaptiveValue(fMin: number, fMax: number, vMin: number, vMax: nu
   const k = (fMax - fMin) / (vMax - vMin);
   const b = fMin - k * vMin;
 
-  return `calc(${k} * 100vw + ${b}px)`;
+  return ` calc(${k} * 100vw + ${b}px)`;
 }
 

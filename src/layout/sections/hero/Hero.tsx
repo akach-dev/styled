@@ -1,8 +1,9 @@
 import React from 'react';
 import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
-import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {adaptiveValue} from "../../../assets/adaptiveValue";
+import {Container} from "../../../components/Container";
 
 export const Hero = () => {
   return (
@@ -24,48 +25,57 @@ export const Hero = () => {
   );
 };
 
-const HeroContainer = styled(Container)`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  border: 2px solid cadetblue;
-`
 
 const StyledHero = styled.section`
   height: 100vh;
+
+`
+const HeroContainer = styled(Container)`
+  min-height: 100%;
   display: flex;
-  //padding-top: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
-  //padding-bottom: calc(80px + (250 - 80) * ((100vw - 320px) / (1170 - 320)));
-  /*  & *:not(:last-child) {
-      margin-bottom: 10px;
-    }*/
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 65px;
+  align-items: center;
 `
 
 const HeroImg = styled.div`
   position: relative;
-  flex: 0 0 350px;
+  width: 350px;
+  flex-shrink: 0;
   height: 430px;
-
+  @media ${theme.media.container} {
+    height: ${
+            adaptiveValue(380, 430, 1170, 360)
+    };
+    width: ${
+            adaptiveValue(310, 350, 1170, 360)
+    };
+  }
 
   &::before {
     content: '';
     position: absolute;
-    transform: translate(5%, -7%);
+    transform: translate(5%, -5%);
     display: block;
     border: 5px solid #7572D5;
-    width: 105.73%;
-    height: 113.96%;
+    width: 101.3%;
+    height: 109%;
   }
 `
 const Img = styled.img`
   max-width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 `
 const HeroBody = styled.div`
-  flex: 1 1 auto;
+  max-width: 600px;
   padding-right: 30px;
+  @media ${theme.media.tablet} {
+    padding-right: 0;
 
+  }
 
   & *:not(:last-child) {
     margin-bottom: 10px;
@@ -77,7 +87,7 @@ const HeroHi = styled.span`
 `
 const HeroTitle = styled.h3`
   font-family: Josefin Sans, sans-serif;
-  //font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
+  font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
   font-weight: 700;
   letter-spacing: 0.05em;
 
