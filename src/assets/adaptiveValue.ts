@@ -1,3 +1,5 @@
+import {theme} from "../styles/Theme";
+
 export function adaptiveValue(fMin: number, fMax: number, vMin: number, vMax: number): string {
   const k = (fMax - fMin) / (vMax - vMin);
   const b = fMin - k * vMin;
@@ -7,16 +9,33 @@ export function adaptiveValue(fMin: number, fMax: number, vMin: number, vMax: nu
 
 type AdaptivePropsType = {
   value: string
-  fMin: number
-  fMax: number
+  Fmin: number
+  Fmax: number
   vMin: number
   vMax: number
 }
 
-export const adaptive = ({value, fMin, fMax, vMin, vMax}: AdaptivePropsType) => `
- ${value}: calc(${fMin}px + (${fMax} - ${fMin}) * ((100vw - ${vMin}px) / (${vMax} - ${vMin})))
+export const adaptive = ({value, Fmin, Fmax, vMin, vMax}: AdaptivePropsType) => `
+    ${value}: calc( (100vw - ${vMin}px)/(${vMax} - ${vMin}) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
 
+type FontPropsType = {
+  value: string
+  family?: string
+  weight?: number
+  color?: string
+  lineHeight?: number
+  Fmin?: number
+  Fmax?: number
+}
+
+export const font = ({value, family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
+font-family: ${family || 'Popins'};
+font-weight: ${weight || 400};
+    color: ${color || theme.colors.font};
+    line-height: ${lineHeight || 1};
+    ${value}: calc( (100vw - 360px)/(1170 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
+`
 
 
 

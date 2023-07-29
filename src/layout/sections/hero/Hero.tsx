@@ -3,7 +3,7 @@ import hero from "../../../assets/images/photo.webp"
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
-import {adaptive} from "../../../assets/adaptiveValue";
+import {adaptive, font} from "../../../assets/adaptiveValue";
 
 export const Hero = () => {
   return (
@@ -30,21 +30,12 @@ const StyledHero = styled.section`
   height: 100vh;
 
 `
-const HeroContainer = styled(Container)`
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 65px;
-  align-items: center;
-`
-
 const HeroImg = styled.div`
   position: relative;
   width: 350px;
   //flex-shrink: 0;
-
-
+  ${adaptive({value: 'width', Fmin: 310, Fmax: 350, vMin: 360, vMax: 1170})}
+  ${adaptive({value: 'height', Fmin: 380, Fmax: 430, vMin: 360, vMax: 1170})}
   &::before {
     content: '';
     position: absolute;
@@ -55,8 +46,19 @@ const HeroImg = styled.div`
     height: 109%;
   }
 
-  ${adaptive({value: 'height', fMin: 310, fMax: 350, vMin: 360, vMax: 1170})}
 
+
+
+
+`
+
+const HeroContainer = styled(Container)`
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 65px;
+  align-items: center;
 `
 const Img = styled.img`
   max-width: 100%;
@@ -81,12 +83,11 @@ const HeroHi = styled.span`
   display: inline-block;
 `
 const HeroTitle = styled.h3`
-  font-family: Josefin Sans, sans-serif;
-  font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
-  font-weight: 700;
-  letter-spacing: 0.05em;
-
-
+  ${font({family: 'Josefin Sans, sans-serif', weight: 700, Fmax: 50, Fmin: 30, value: 'font-size'})}
+    //font-family: Josefin Sans, sans-serif;
+    //font-size: calc(36px + (50 - 36) * ((100vw - 360px) / (1170 - 360)));
+    //font-weight: 700;
+    //letter-spacing: 0.05em;
   span {
     color: cadetblue;
     position: relative;
