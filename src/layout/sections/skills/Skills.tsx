@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Title} from "../../../components/Title";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
+import {adaptiveValue} from "../../../assets/adaptiveValue";
 
 export const Skills = () => {
   return (
@@ -53,7 +54,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-
+  ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
 `
 const StyledSkillsContainer = styled(Container)`
   display: grid;
