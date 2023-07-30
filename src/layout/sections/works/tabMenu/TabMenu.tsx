@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
-import {adaptiveValue} from "../../../../assets/adaptiveValue";
 
 type MenuPropsTypes = {
   menuItems: string[]
@@ -31,12 +30,14 @@ const StyledTabMenu = styled.nav`
   }
 
   ul {
+    margin-inline: auto;
+    max-width: 352px;
     display: flex;
-    justify-content: center;
-    ${adaptiveValue({value: 'gap', Fmax: 40, Fmin: 33, vMax: 1170, vMin: 360})}
+    justify-content: space-between;
+    //width: 100%;
+
   }
 `
 const ListItem = styled.li`
-
 `
 
