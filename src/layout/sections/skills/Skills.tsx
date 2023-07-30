@@ -42,7 +42,7 @@ export const Skills = () => {
          <Skill iconId={'figma'} title={'WEB DESIgN'}>
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
            quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
+           tempore.Lorem ipsum dolor s1it amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
            quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
            tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
            quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
@@ -52,6 +52,7 @@ export const Skills = () => {
      </StyledSkills>
   );
 };
+
 
 const StyledSkills = styled.section`
   ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}

@@ -6,7 +6,6 @@ import {theme} from "../styles/Theme";
 
   return ` calc(${k} * 100vw + ${b}px)`;
 }*/
-
 type adaptiveValuePropsType = {
   value: string
   Fmin: number
