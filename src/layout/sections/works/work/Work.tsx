@@ -54,22 +54,37 @@ const ImageWrapper = styled.div`
     }
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+  }
+
+
   &:hover {
-    ${Button} {
+    &::before {
       opacity: 1;
     }
 
+    ${Button} {
+      opacity: 1;
+    }
+  }
+
+  @media ${theme.media.tablet} {
     &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.30);
-      backdrop-filter: blur(4px);
+      opacity: 1;
     }
 
+    ${Button} {
+      opacity: 1;
+    }
   }
 `
 const Image = styled.img`
