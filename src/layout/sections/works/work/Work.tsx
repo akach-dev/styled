@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
 import {Button} from "../../../../components/Button";
+import {theme} from "../../../../styles/Theme";
 
 type WorkPropsType = {
   src: string
@@ -27,7 +28,12 @@ export const Work = ({src, text, title}: WorkPropsType) => {
 };
 
 const StyledWork = styled.div`
-  max-width: 540px;
+  width: 330px;
+  flex-grow: 1;
+
+  @media ${theme.media.desktop} {
+    max-width: 540px;
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -35,7 +41,7 @@ const ImageWrapper = styled.div`
   cursor: pointer;
 
   ${Button} {
-    transition: all 0.2s ease 0s;
+    transition: all 0.3s ease;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -54,7 +60,6 @@ const ImageWrapper = styled.div`
     }
 
     &::before {
-      transition: all 0.6s ease 0s;
       content: '';
       position: absolute;
       top: 0;

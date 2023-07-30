@@ -34,8 +34,6 @@ const StyledTabMenu = styled.nav`
     max-width: 352px;
     display: flex;
     justify-content: space-between;
-    //width: 100%;
-
   }
 `
 const ListItem = styled.li`

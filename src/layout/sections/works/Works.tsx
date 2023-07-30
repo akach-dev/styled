@@ -35,7 +35,7 @@ export const Works = () => {
        <Container>
          <Title>My Works</Title>
          <TabMenu menuItems={workItems} color={'#fff'}/>
-         <FlexWrapper justify={'space-between'}>
+         <FlexWrapper justify={'space-between'} wrap={'wrap'}>
            {
              cardItem.map(card => (
                 <Work key={card.id} src={card.src} text={card.text} title={card.title}/>
@@ -48,9 +48,13 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
+
+  ${FlexWrapper} {
+    gap: 30px;
+  }
+
   h2:not(:last-child) {
     margin-bottom: 2.25em;
-
   }
 `
 
