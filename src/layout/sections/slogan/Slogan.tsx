@@ -13,7 +13,6 @@ export const Slogan = () => {
      </StyledSlogan>
   );
 };
-
 const StyledSlogan = styled.section`
   text-align: center;
 `
