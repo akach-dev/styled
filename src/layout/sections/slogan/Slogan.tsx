@@ -15,4 +15,5 @@ export const Slogan = () => {
 };
 const StyledSlogan = styled.section`
   text-align: center;
+  
 `

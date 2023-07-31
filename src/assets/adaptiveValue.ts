@@ -17,7 +17,6 @@ type adaptiveValuePropsType = {
 export const adaptiveValue = ({value, Fmin, Fmax, vMin, vMax}: adaptiveValuePropsType) => `
     ${value}: calc( (100vw - ${vMin}px)/(${vMax} - ${vMin}) * (${Fmax} - ${Fmin}) + ${Fmin}px);
 `
-
 type FontPropsType = {
   family?: string
   weight?: number
