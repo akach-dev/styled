@@ -1,4 +1,4 @@
-import React from 'react';
+import {FC} from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/Title";
 import {Icon} from "../../../components/icon/Icon";
@@ -7,7 +7,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {IconWrapper} from "../../../components/IconWrapper";
 
-export const Testimony = () => {
+export const Testimony: FC = () => {
   return (
      <StyledTestimony>
        <Container>
