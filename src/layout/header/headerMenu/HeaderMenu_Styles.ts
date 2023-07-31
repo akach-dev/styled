@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {adaptiveValue} from "../../../assets/adaptiveValue";
 
-//================ Desktop Menu Styles====================//
+//================ Menu Styles ====================//
 
 const Mask = styled.span`
   position: absolute;
@@ -63,8 +63,8 @@ const Link = styled.a`
   ${adaptiveValue({value: 'font-size', Fmin: 20, Fmax: 30, vMin: 767.98, vMax: 1170})}
 `
 
-//================ Desktop Menu Styles====================//
-//================ Mobile Menu Styles====================//
+//====================================//
+//================ Mobile Menu Styles ====================//
 
 const MobileMenu = styled.nav`
 `
@@ -91,8 +91,6 @@ const Popup = styled.div<{ isOpen: boolean }>`
     gap: 2rem;
   }
 `
-
-
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
   top: -115px;
@@ -143,11 +141,27 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       `}
     }
   }
-}
+}`
+
+//===================================//
+//================ Desktop Menu Styles====================//
+
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+  }
 `
 
-//================ Mobile Menu Styles====================//
+//====================================//
 
 export const S = {
-  Mask, Link, MenuItem, MobileMenu, BurgerButton, Popup
+  Mask,
+  Link,
+  MenuItem,
+  MobileMenu,
+  BurgerButton,
+  Popup,
+  DesktopMenu
 }
