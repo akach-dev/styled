@@ -17,4 +17,3 @@ export const Icon = ({iconId, width, height, viewBox}: IconPropsType) => {
   );
 };
 
-
