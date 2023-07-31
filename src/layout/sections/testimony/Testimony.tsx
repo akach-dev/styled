@@ -4,8 +4,8 @@ import {Title} from "../../../components/Title";
 import {Icon} from "../../../components/icon/Icon";
 import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {IconWrapper} from '../skills/skill/Skill';
 import {Container} from "../../../components/Container";
+import {IconWrapper} from "../../../components/IconWrapper";
 
 export const Testimony = () => {
   return (

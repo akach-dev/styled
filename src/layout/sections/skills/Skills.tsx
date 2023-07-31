@@ -1,64 +1,75 @@
 import React from 'react';
-import styled from "styled-components";
 import {Title} from "../../../components/Title";
 import {Skill} from "./skill/Skill";
-import {Container} from "../../../components/Container";
-import {adaptiveValue} from "../../../assets/adaptiveValue";
+import {S} from './Skills_Styles';
+
+const skillData = [
+  {
+    iconId: 'code',
+    title: 'html5',
+    text: '    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et\n' +
+       '           dolore magna aliqua Ut enim'
+  },
+  {
+    iconId: 'css',
+    title: 'css3',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum, eveniet fuga\n' +
+       '           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni\n' +
+       '           temporibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum,\n' +
+       '           eveniet fuga\n' +
+       '           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni\n' +
+       '           temporibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum,\n' +
+       '           eveniet fuga\n' +
+       '           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni temporibus!'
+  },
+  {
+    iconId: 'react',
+    title: 'React',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.'
+  },
+  {
+    iconId: 'ts',
+    title: 'typescript',
+    text: '    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.'
+  },
+  {
+    iconId: 'st',
+    title: 'styled components',
+    text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.'
+  },
+  {
+    iconId: 'figma',
+    title: 'WEB DESIgN',
+    text: '    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.Lorem ipsum dolor s1it amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa\n' +
+       '           ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam\n' +
+       '           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia\n' +
+       '           tempore.'
+  },
+]
 
 export const Skills = () => {
   return (
-     <StyledSkills>
+     <S.Skills>
        <Title>My Skills</Title>
-       <StyledSkillsContainer>
-         <Skill iconId={'code'} title={'html5'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-           dolore magna aliqua Ut enim
-         </Skill>
-         <Skill iconId={'css'} title={'css3'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum, eveniet fuga
-           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni
-           temporibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum,
-           eveniet fuga
-           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni
-           temporibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque, deserunt eaque earum,
-           eveniet fuga
-           inventore nam non obcaecati quam quasi quis, repellendus vel. Aliquid cum delectus ipsam magni temporibus!
-         </Skill>
-         <Skill iconId={'react'} title={'React'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.
-         </Skill>
-         <Skill iconId={'ts'} title={'typescript'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.
-         </Skill>
-         <Skill iconId={'st'} title={'styled components'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.
-         </Skill>
-         <Skill iconId={'figma'} title={'WEB DESIgN'}>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.Lorem ipsum dolor s1it amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi deserunt earum ipsa ipsam
-           quisquam quod saepe vel voluptas. At aut distinctio dolore, earum exercitationem ipsa libero quaerat quia
-           tempore.
-         </Skill>
-       </StyledSkillsContainer>
-     </StyledSkills>
+       <S.SkillsContainer>
+         {
+           skillData.map((skill, i) => (
+              <Skill key={i} iconId={skill.iconId} title={skill.title} text={skill.text}/>
+           ))
+         }
+       </S.SkillsContainer>
+     </S.Skills>
   );
 };
 
 
-const StyledSkills = styled.section`
-  ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
-`
-const StyledSkillsContainer = styled(Container)`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  column-gap: 40px;
-`

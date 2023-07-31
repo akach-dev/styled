@@ -1,4 +1,4 @@
-import React from 'react';
+import {FC} from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
 import {Button} from "../../../../components/Button";
@@ -10,7 +10,7 @@ type WorkPropsType = {
   text: string
 }
 
-export const Work = ({src, text, title}: WorkPropsType) => {
+export const Work: FC<WorkPropsType> = ({src, text, title}: WorkPropsType) => {
   return (
      <StyledWork>
        <ImageWrapper>

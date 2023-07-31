@@ -1,4 +1,4 @@
-import React from 'react';
+import {FC} from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/Title";
 
@@ -13,7 +13,7 @@ import {TabMenu} from "./tabMenu/TabMenu";
 const workItems = [
   "All", 'landing page', 'React', 'spa'
 ]
-const cardItem = [
+const workData = [
   {
     id: '1',
     src: social,
@@ -29,7 +29,7 @@ const cardItem = [
 ]
 
 
-export const Works = () => {
+export const Works: FC = () => {
   return (
      <StyledWorks>
        <Container>
@@ -37,8 +37,8 @@ export const Works = () => {
          <TabMenu menuItems={workItems} color={'#fff'}/>
          <FlexWrapper justify={'space-between'} wrap={'wrap'}>
            {
-             cardItem.map(card => (
-                <Work key={card.id} src={card.src} text={card.text} title={card.title}/>
+             workData.map(work => (
+                <Work key={work.id} src={work.src} text={work.text} title={work.title}/>
              ))
            }
          </FlexWrapper>
@@ -48,7 +48,6 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-
   ${FlexWrapper} {
     gap: 30px;
   }
