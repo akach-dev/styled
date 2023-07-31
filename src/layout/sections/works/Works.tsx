@@ -1,5 +1,4 @@
 import {FC} from 'react';
-import styled from "styled-components";
 import {Title} from "../../../components/Title";
 
 import {FlexWrapper} from "../../../components/FlexWrapper";
@@ -8,6 +7,7 @@ import social from '../../../assets/images/social.webp'
 import timer from '../../../assets/images/timer.webp'
 import {Container} from "../../../components/Container";
 import {TabMenu} from "./tabMenu/TabMenu";
+import {S} from './Works_Styles';
 
 
 const workItems = [
@@ -31,7 +31,7 @@ const workData = [
 
 export const Works: FC = () => {
   return (
-     <StyledWorks>
+     <S.Works>
        <Container>
          <Title>My Works</Title>
          <TabMenu menuItems={workItems} color={'#fff'}/>
@@ -43,17 +43,9 @@ export const Works: FC = () => {
            }
          </FlexWrapper>
        </Container>
-     </StyledWorks>
+     </S.Works>
   );
 };
 
-const StyledWorks = styled.section`
-  ${FlexWrapper} {
-    gap: 30px;
-  }
 
-  h2:not(:last-child) {
-    margin-bottom: 2.25em;
-  }
-`
 
