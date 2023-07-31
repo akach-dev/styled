@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styled from "styled-components";
 import {Title} from "../../../components/Title";
 import {Button} from "../../../components/Button";
 
-export const Slogan = () => {
+export const Slogan: FC = () => {
   return (
      <StyledSlogan>
        <Title>I Am Available For Freelance</Title>
@@ -15,5 +15,4 @@ export const Slogan = () => {
 };
 const StyledSlogan = styled.section`
   text-align: center;
-  
 `

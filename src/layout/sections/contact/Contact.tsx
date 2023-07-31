@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Title} from "../../../components/Title";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {S} from './Contact_Styles';
 
-export const Contact = () => {
+export const Contact: FC = () => {
   return (
      <S.Contact>
        <Container>
