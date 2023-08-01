@@ -1,6 +1,5 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
-import {adaptiveValue} from "../../../assets/adaptiveValue";
 
 //================ Menu Styles ====================//
 
@@ -60,21 +59,24 @@ const Link = styled.a`
   font-weight: 400;
   line-height: 1.1; /* 110% */
   color: transparent;
-  ${adaptiveValue({value: 'font-size', Fmin: 20, Fmax: 30, vMin: 767.98, vMax: 1170})}
+  font-size: 30px;
+
+  @media screen and (max-width: 1170px) and (min-width: 767.98px) {
+    font-size: calc((100vw - 767.98px) / (1170 - 767.98) * (30 - 25) + 25px);
+  }
+
 `
 
 //====================================//
 //================ Mobile Menu Styles ====================//
+
 
 const MobileMenu = styled.nav`
 `
 const Popup = styled.div<{ isOpen: boolean }>`
   background: rgba(31, 31, 32, 0.90);
   position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  inset: 0;
   z-index: 100;
   display: none;
 
