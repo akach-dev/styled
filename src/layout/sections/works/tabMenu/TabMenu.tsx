@@ -1,20 +1,29 @@
 import React from 'react';
 import styled from "styled-components";
 import {Link} from "../../../../components/Link";
+import {TabsItemsPropsTypes} from "../Works";
 
-type MenuPropsTypes = {
-  menuItems: string[]
+export type FilterStatusType = 'all' | 'loading' | 'react' | 'spa'
+
+type TabMenuPropsTypes = {
+  tabsItems: TabsItemsPropsTypes[]
   color?: string
+  currentFilterStatus: FilterStatusType
+  changeFilterStatus: (value: FilterStatusType) => void
 }
 
-export const TabMenu = ({menuItems, color}: MenuPropsTypes) => {
+export const TabMenu = ({tabsItems, color, changeFilterStatus, currentFilterStatus}: TabMenuPropsTypes) => {
   return (
      <StyledTabMenu color={color}>
        <ul>
          {
-           menuItems.map((menu, index) => (
+           tabsItems.map((tab, index) => (
               <ListItem key={index}>
-                <Link href={"#"}>{menu}</Link>
+                <Link
+                   active={currentFilterStatus === tab.status}
+                   as={'button'}
+                   onClick={() => changeFilterStatus(tab.status)}
+                >{tab.title}</Link>
               </ListItem>
            ))
          }
@@ -37,5 +46,9 @@ const StyledTabMenu = styled.nav`
   }
 `
 const ListItem = styled.li`
+  button {
+    width: auto;
+    height: auto;
+  }
 `
 
