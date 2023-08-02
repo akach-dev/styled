@@ -3,6 +3,7 @@ import {theme} from "../../styles/Theme";
 import {font} from "../../assets/adaptiveValue";
 
 const Footer = styled.footer`
+  position: relative;
   background: ${theme.colors.primaryBg};
   padding: 40px;
   display: flex;

@@ -22,12 +22,10 @@ export const Hero = () => {
                   strings: ['A Web Developer.', 'A Frontend Developer'],
                   autoStart: true,
                   loop: true,
-                  // delay: 100
                 }}
              />
            </S.HeroSubTitle>
          </S.HeroBody>
-
 
          <Tilt
             className="parallax-effect-img"
@@ -42,8 +40,6 @@ export const Hero = () => {
              <S.Img src={hero} alt="my img"/>
            </S.HeroImg>
          </Tilt>
-
-
        </S.HeroContainer>
      </S.Hero>
   );

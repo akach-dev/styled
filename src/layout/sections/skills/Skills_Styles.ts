@@ -27,6 +27,7 @@ const SkillText = styled.p`
 //=======================================//
 
 const Skills = styled.section`
+  position: relative;
   ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
 `
 const SkillsContainer = styled(Container)`

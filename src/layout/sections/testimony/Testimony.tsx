@@ -24,6 +24,7 @@ export const Testimony: FC = () => {
 };
 
 const StyledTestimony = styled.section`
+  position: relative;
   background: #252527;
 
   h2:not(:last-child) {
