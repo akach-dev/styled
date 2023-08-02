@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
-export const Link = styled.a<{
+type LinkPropsType = {
   active?: boolean
-}>`
+
+}
+
+export const Link = styled.a<LinkPropsType>`
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 1px;

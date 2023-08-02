@@ -64,7 +64,8 @@ const HeroTitle = styled.h3`
     weight: 700,
     Fmax: 50,
     Fmin: 30
-  })} //font-family: Josefin Sans, sans-serif;
+  })};
+
   letter-spacing: 0.05em;
 
   span {
@@ -88,6 +89,10 @@ const HeroTitle = styled.h3`
 
 const HeroSubTitle = styled.h1`
   font-size: 1.6875rem;
+
+  p {
+    display: none;
+  }
 `
 
 export const S = {
