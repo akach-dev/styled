@@ -9,6 +9,7 @@ import {Works} from "./layout/sections/works/Works";
 import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Particle} from "./components/particle/Particle";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
          <Slogan/>
        </main>
        <Footer/>
+       <GoTopBtn/>
      </Wrapper>
   );
 }

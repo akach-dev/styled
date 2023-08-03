@@ -13,6 +13,7 @@ const Footer = styled.footer`
   & > *:not(:last-child) {
     margin-bottom: 2em;
   }
+  
 `
 
 const Name = styled.span`
