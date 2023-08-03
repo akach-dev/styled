@@ -27,6 +27,15 @@ const Mask = styled.span`
 const MenuItem = styled.li`
   position: relative;
 
+
+`
+const NavLink = styled(Link)`
+  font-family: 'Josefin Sans', 'sans-serif';
+  font-weight: 400;
+  line-height: 1.1; /* 110% */
+  color: transparent;
+  font-size: 30px;
+
   &::before {
     content: '';
     display: inline-block;
@@ -41,7 +50,7 @@ const MenuItem = styled.li`
     transition: all 0.3s ease 0s;
   }
 
-  &:hover {
+  &:hover, &.active {
     &::before {
       transform: scale(1);
     }
@@ -54,13 +63,7 @@ const MenuItem = styled.li`
         transform: skewX(10deg) translateX(-3px);
       }
     }
-`
-const NavLink = styled(Link)`
-  font-family: 'Josefin Sans', 'sans-serif';
-  font-weight: 400;
-  line-height: 1.1; /* 110% */
-  color: transparent;
-  font-size: 30px;
+  }
 
   @media screen and (max-width: 1170px) and (min-width: 767.98px) {
     font-size: calc((100vw - 767.98px) / (1170 - 767.98) * (30 - 25) + 25px);

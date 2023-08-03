@@ -33,7 +33,12 @@ export const Menu: FC = () => {
        {
          menuItems.map((menu, index) => (
             <S.MenuItem key={index}>
-              <S.NavLink to={menu.href}>{menu.title}
+              <S.NavLink
+                 activeClass="active"
+                 spy={true}
+                 smooth={true}
+                 to={menu.href}
+              >{menu.title}
                 <S.Mask>
                   <span>{menu.title}</span>
                 </S.Mask>
