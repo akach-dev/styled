@@ -70,7 +70,7 @@ export const Works: FC = () => {
   const changeFilterStatus = (value: 'all' | 'loading' | 'react' | 'spa') => setCurrentFilterStatus(value)
 
   return (
-     <S.Works>
+     <S.Works id={'works'}>
        <Container>
          <Title>My Works</Title>
          <TabMenu

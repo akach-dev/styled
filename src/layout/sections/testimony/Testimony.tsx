@@ -9,7 +9,7 @@ import {IconWrapper} from "../../../components/IconWrapper";
 
 export const Testimony: FC = () => {
   return (
-     <StyledTestimony>
+     <StyledTestimony id={'testimony'}>
        <Container>
          <Title>Testimony</Title>
          <FlexWrapper direction={'column'} align={'center'}>

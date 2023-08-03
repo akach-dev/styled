@@ -6,7 +6,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Hero = () => {
   return (
-     <S.Hero>
+     <S.Hero id={'hero'}>
        <S.HeroContainer>
 
          <S.HeroBody>

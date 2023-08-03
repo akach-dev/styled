@@ -5,10 +5,6 @@ import {S} from "./Header_Styles";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 
 
-const headerItems = [
-  'Home', 'Skills', 'Works', 'Testimony', 'Contact'
-]
-
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth)
 
@@ -28,9 +24,9 @@ export const Header: FC = () => {
          {
            width < breakpoint
               ? (
-                 <MobileMenu menuItems={headerItems}/>
+                 <MobileMenu/>
               ) : (
-                 <DesktopMenu menuItems={headerItems}/>
+                 <DesktopMenu/>
               )
          }
        </S.HeaderContainer>

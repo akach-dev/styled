@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 //================ Menu Styles ====================//
 
@@ -54,7 +55,7 @@ const MenuItem = styled.li`
       }
     }
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
   font-family: 'Josefin Sans', 'sans-serif';
   font-weight: 400;
   line-height: 1.1; /* 110% */
@@ -160,7 +161,7 @@ const DesktopMenu = styled.nav`
 
 export const S = {
   Mask,
-  Link,
+  NavLink,
   MenuItem,
   MobileMenu,
   BurgerButton,

@@ -59,7 +59,7 @@ const skillData = [
 
 export const Skills = () => {
   return (
-     <S.Skills>
+     <S.Skills id={'skills'}>
        <Title>My Skills</Title>
        <S.SkillsContainer>
          {
