@@ -7,7 +7,6 @@ import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth)
-
   const breakpoint = 767.98
 
   useEffect(() => {
