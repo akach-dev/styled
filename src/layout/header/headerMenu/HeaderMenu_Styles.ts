@@ -82,20 +82,30 @@ const Popup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   inset: 0;
   z-index: 100;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: all .6s ease;
 
-  ${({isOpen}) => isOpen && css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `}
+
   ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 10px;
+    transition: all 0.3s ease;
   }
+
+  ${({isOpen}) => isOpen && css`
+    transform: translateY(0);
+
+    ul {
+      gap: 2rem;
+    }
+
+  `}
 `
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
