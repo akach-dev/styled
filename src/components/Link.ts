@@ -12,7 +12,7 @@ export const Link = styled.a<LinkPropsType>`
   letter-spacing: 1px;
   position: relative;
   z-index: 2;
-  transition: all 0.4s ease 0s;
+
 
   &:hover {
     &::before {
@@ -21,7 +21,9 @@ export const Link = styled.a<LinkPropsType>`
   }
 
   &::before {
+    transition: all 0.2s ease;
     content: '';
+    height: 0;
     display: inline-block;
     position: absolute;
     bottom: -4px;

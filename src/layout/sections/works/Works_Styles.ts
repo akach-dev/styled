@@ -17,7 +17,6 @@ const ImageWrapper = styled.div`
   cursor: pointer;
 
   ${Button} {
-    transition: all 0.3s ease;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,12 +30,11 @@ const ImageWrapper = styled.div`
   }
 
   &::before {
+    transition: all 0.3s ease;
+
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(4px);
     opacity: 0;
