@@ -20,8 +20,9 @@ const ImageWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -40%);
     opacity: 0;
+    transition: all 0.3s ease;
 
     &::after {
       width: 100%;
@@ -48,6 +49,8 @@ const ImageWrapper = styled.div`
 
     ${Button} {
       opacity: 1;
+      transform: translate(-50%, -50%);
+      
     }
   }
 
@@ -58,6 +61,7 @@ const ImageWrapper = styled.div`
 
     ${Button} {
       opacity: 1;
+
     }
   }
 `
