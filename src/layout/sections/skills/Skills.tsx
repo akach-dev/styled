@@ -2,6 +2,7 @@ import React from 'react';
 import {Title} from "../../../components/Title";
 import {Skill} from "./skill/Skill";
 import {S} from './Skills_Styles';
+import {Fade} from "react-awesome-reveal";
 
 const skillData = [
   {
@@ -62,11 +63,13 @@ export const Skills = () => {
      <S.Skills id={'skills'}>
        <Title>My Skills</Title>
        <S.SkillsContainer>
-         {
-           skillData.map((skill, i) => (
-              <Skill key={i} iconId={skill.iconId} title={skill.title} text={skill.text}/>
-           ))
-         }
+         <Fade cascade damping={0.2}>
+           {
+             skillData.map((skill, i) => (
+                <Skill key={i} iconId={skill.iconId} title={skill.title} text={skill.text}/>
+             ))
+           }
+         </Fade>
        </S.SkillsContainer>
      </S.Skills>
   );
