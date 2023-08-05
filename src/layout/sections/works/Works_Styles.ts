@@ -4,12 +4,6 @@ import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Work = styled.div`
-  width: 330px;
-  flex-grow: 1;
-
-  @media ${theme.media.desktop} {
-    max-width: 540px;
-  }
 `
 
 const ImageWrapper = styled.div`
@@ -50,7 +44,7 @@ const ImageWrapper = styled.div`
     ${Button} {
       opacity: 1;
       transform: translate(-50%, -50%);
-      
+
     }
   }
 
