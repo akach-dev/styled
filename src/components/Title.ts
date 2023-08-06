@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {adaptiveValue} from "../assets/adaptiveValue";
 
 export const Title = styled.h2`
   color: #FFF;
@@ -9,8 +8,8 @@ export const Title = styled.h2`
   letter-spacing: 5px;
   text-align: center;
   position: relative;
+  
 
-  ${adaptiveValue({value: 'font-size', Fmin: 30, Fmax: 36, vMin: 360, vMax: 1170})}
   &::after {
     content: '';
     background-color: #7573D5;

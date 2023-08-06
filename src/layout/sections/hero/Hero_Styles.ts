@@ -8,7 +8,6 @@ const Hero = styled.section`
   display: flex;
   ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
 `
-
 const HeroContainer = styled(Container)`
   display: flex;
   justify-content: center;
