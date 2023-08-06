@@ -7,11 +7,11 @@ type AdaptiveProps = {
   keepSize?: number;
 };
 
-const rem = (px: number): string => {
+export const rem = (px: number): string => {
   return `${px / 16}rem`;
 };
 
-const em = (px: number, current = 16): string => {
+export const em = (px: number, current = 16): string => {
   return `${px / current}em`;
 };
 
@@ -19,11 +19,11 @@ export const generateAdaptiveStyles = ({
                                          property,
                                          startSize = 16,
                                          minSize,
-                                         widthFrom = 1140,
+                                         widthFrom = 1170,
                                          widthTo = 360,
                                          keepSize = 0,
                                        }: AdaptiveProps): string => {
-  if (widthFrom === 1140 && widthTo === 0) {
+  if (widthFrom === 1170 && widthTo === 0) {
     widthFrom = 1440;
   }
 

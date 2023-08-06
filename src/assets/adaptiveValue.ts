@@ -36,58 +36,58 @@ export const font = ({family, weight, color, lineHeight, Fmin, Fmax}: FontPropsT
 
 
 //===========================//===========================//===========================//===========================
-
-const minWidth: number = 360;
-const maxWidth: number = 1440;
-const maxWidthContainer: number = 1140;
-const containerPadding: number = 30;
-const containerWidth: number = maxWidthContainer + containerPadding;
-
-
-function rem(px: number) {
-  return px / 16;
-}
-
-function em(px: number, current = 16) {
-  return px / current;
-}
-
-export function adaptive(
-   property: string,
-   startSize: number,
-   minSize: number,
-   widthFrom: number = containerWidth,
-   widthTo: number = minWidth,
-   keepSize: number = 0
-) {
-  if (widthFrom == containerWidth && maxWidthContainer == 0) {
-    widthFrom = maxWidth;
-  }
-
-  const widthFromMedia: string = `${em(widthFrom)}`;
-  const widthToMedia: string = `${em(widthTo)}`;
-
-  const slope: number = (startSize - minSize) / (widthFrom - widthTo);
-  const yIntersection: number = -widthTo * slope + minSize;
-  const flyValue: string = `${rem(yIntersection)} + ${slope * 100}vw`;
-
-  const propertyValue: string = `clamp(${rem(minSize)}, ${flyValue}, ${rem(startSize)})`;
-
-  if (widthFrom == containerWidth || widthFrom == maxWidth || keepSize == 1 || keepSize == 2) {
-    console.log(`@media screen and  (min-width: ${widthFromMedia}) {
-      ${property}: ${rem(startSize)};
-    }`);
-  }
-
-  console.log(`@media screen and (min-width: ${widthToMedia}) and (max-width: ${widthFromMedia}) {
-    ${property}: ${propertyValue};
-  }`);
-
-  if (widthTo == minWidth || keepSize == 1 || keepSize == 3) {
-    console.log(`@media screen and  (max-width: ${widthToMedia}) {
-      ${property}: ${rem(minSize)};
-    }`);
-  }
-}
-
+//
+// const minWidth: number = 360;
+// const maxWidth: number = 1440;
+// const maxWidthContainer: number = 1140;
+// const containerPadding: number = 30;
+// const containerWidth: number = maxWidthContainer + containerPadding;
+//
+//
+// function rem(px: number) {
+//   return px / 16;
+// }
+//
+// function em(px: number, current = 16) {
+//   return px / current;
+// }
+//
+// export function adaptive(
+//    property: string,
+//    startSize: number,
+//    minSize: number,
+//    widthFrom: number = containerWidth,
+//    widthTo: number = minWidth,
+//    keepSize: number = 0
+// ) {
+//   if (widthFrom == containerWidth && maxWidthContainer == 0) {
+//     widthFrom = maxWidth;
+//   }
+//
+//   const widthFromMedia: string = `${em(widthFrom)}`;
+//   const widthToMedia: string = `${em(widthTo)}`;
+//
+//   const slope: number = (startSize - minSize) / (widthFrom - widthTo);
+//   const yIntersection: number = -widthTo * slope + minSize;
+//   const flyValue: string = `${rem(yIntersection)} + ${slope * 100}vw`;
+//
+//   const propertyValue: string = `clamp(${rem(minSize)}, ${flyValue}, ${rem(startSize)})`;
+//
+//   if (widthFrom == containerWidth || widthFrom == maxWidth || keepSize == 1 || keepSize == 2) {
+//     console.log(`@media screen and  (min-width: ${widthFromMedia}) {
+//       ${property}: ${rem(startSize)};
+//     }`);
+//   }
+//
+//   console.log(`@media screen and (min-width: ${widthToMedia}) and (max-width: ${widthFromMedia}) {
+//     ${property}: ${propertyValue};
+//   }`);
+//
+//   if (widthTo == minWidth || keepSize == 1 || keepSize == 3) {
+//     console.log(`@media screen and  (max-width: ${widthToMedia}) {
+//       ${property}: ${rem(minSize)};
+//     }`);
+//   }
+// }
+//
 

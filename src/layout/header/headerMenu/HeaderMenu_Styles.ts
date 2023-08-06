@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Link} from "react-scroll";
+import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
 
 //================ Menu Styles ====================//
 
@@ -34,9 +35,15 @@ const NavLink = styled(Link)`
   font-weight: 400;
   line-height: 1.1; /* 110% */
   color: transparent;
-  font-size: 30px;
+  //font-size: 30px;
 
-
+  ${generateAdaptiveStyles({
+    property: 'font-size',
+    startSize: 30,
+    minSize: 22,
+    widthFrom: 1140,
+    widthTo: 767.98
+  })}
   &::before {
     content: '';
     display: inline-block;
@@ -65,11 +72,6 @@ const NavLink = styled(Link)`
       }
     }
   }
-
-  @media screen and (max-width: 1170px) and (min-width: 767.98px) {
-    font-size: calc((100vw - 767.98px) / (1170 - 767.98) * (30 - 25) + 25px);
-  }
-
 `
 
 //====================================//
