@@ -36,6 +36,7 @@ const NavLink = styled(Link)`
   color: transparent;
   font-size: 30px;
 
+
   &::before {
     content: '';
     display: inline-block;

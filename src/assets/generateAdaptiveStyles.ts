@@ -17,7 +17,7 @@ const em = (px: number, current = 16): string => {
 
 export const generateAdaptiveStyles = ({
                                          property,
-                                         startSize,
+                                         startSize = 16,
                                          minSize,
                                          widthFrom = 1140,
                                          widthTo = 360,
@@ -36,24 +36,23 @@ export const generateAdaptiveStyles = ({
 
   const propertyValue: string = `clamp(${rem(minSize)}, ${flyValue}, ${rem(startSize)})`;
 
-  const mediaQueries: string[] = [];
+  let styles = '';
 
   if (widthFrom === 1140 || widthFrom === 1440 || keepSize === 1 || keepSize === 2) {
-    mediaQueries.push(`@media screen and (min-width: ${widthFromMedia}) {
+    styles += `@media screen and (min-width: ${widthFromMedia}) {
       ${property}: ${rem(startSize)};
-    }`);
+    }`;
   }
 
-  mediaQueries.push(`@media screen and (min-width: ${widthToMedia}) and (max-width: ${widthFromMedia}) {
+  styles += `@media screen and (min-width: ${widthToMedia}) and (max-width: ${widthFromMedia}) {
     ${property}: ${propertyValue};
-  }`);
+  }`;
 
   if (widthTo === 360 || keepSize === 1 || keepSize === 3) {
-    mediaQueries.push(`@media screen and (max-width: ${widthToMedia}) {
+    styles += `@media screen and (max-width: ${widthToMedia}) {
       ${property}: ${rem(minSize)};
-    }`);
+    }`;
   }
 
-  return mediaQueries.join('\n');
+  return styles;
 };
-

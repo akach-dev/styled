@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 import {font} from "../../assets/adaptiveValue";
+import {generateAdaptiveStyles} from "../../assets/generateAdaptiveStyles";
 
 const Footer = styled.footer`
   position: relative;
@@ -13,7 +14,7 @@ const Footer = styled.footer`
   & > *:not(:last-child) {
     margin-bottom: 2em;
   }
-  
+
 `
 
 const Name = styled.span`
@@ -52,7 +53,14 @@ const SocialLink = styled.a`
 
 const Copyright = styled.small`
   opacity: 0.5;
-  font-size: 0.75rem;
+  ${generateAdaptiveStyles({
+    property: 'font-size',
+    startSize: 40,
+    minSize: 18,
+    widthFrom: 1140,
+    widthTo: 480,
+    keepSize: 2,
+  })}
 `
 
 export const S = {

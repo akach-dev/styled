@@ -90,6 +90,10 @@ export const GlobalStyled = createGlobalStyle`
     line-height: 1.4;
   }
 
+  small {
+    font-size: 1rem;
+  }
+
   img {
     vertical-align: top;
   }
