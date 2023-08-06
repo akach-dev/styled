@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 import {font} from "../../assets/adaptiveValue";
+import {em} from "../../assets/generateAdaptiveStyles";
 
 const Footer = styled.footer`
   position: relative;
@@ -52,7 +53,7 @@ const SocialLink = styled.a`
 
 const Copyright = styled.small`
   opacity: 0.5;
-  font-size: ;
+  font-size: ${em(12)};
 `
 
 export const S = {

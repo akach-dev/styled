@@ -2,11 +2,16 @@ import styled from "styled-components";
 import {adaptiveValue, font} from "../../../assets/adaptiveValue";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
 
 const Hero = styled.section`
   min-height: 100vh;
   display: flex;
-  ${adaptiveValue({value: 'padding-bottom', Fmin: 80, Fmax: 100, vMin: 360, vMax: 1170})}
+  ${generateAdaptiveStyles({
+    property: 'padding-top',
+    startSize: 100,
+    minSize: 80
+  })}
 `
 const HeroContainer = styled(Container)`
   display: flex;
@@ -14,6 +19,7 @@ const HeroContainer = styled(Container)`
   flex-wrap: wrap;
   row-gap: 65px;
   align-items: center;
+
 `
 
 const HeroImg = styled.div`
