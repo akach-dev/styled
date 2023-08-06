@@ -57,9 +57,8 @@ const Copyright = styled.small`
     property: 'font-size',
     startSize: 40,
     minSize: 18,
-    widthFrom: 1140,
-    widthTo: 480,
-    keepSize: 2,
+    widthFrom: 1340,
+ 
   })}
 `
 
