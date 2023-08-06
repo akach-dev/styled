@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {adaptiveValue, font} from "../../../assets/adaptiveValue";
+import {font} from "../../../assets/adaptiveValue";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
@@ -25,8 +25,23 @@ const HeroContainer = styled(Container)`
 const HeroImg = styled.div`
   position: relative;
 
-  ${adaptiveValue({value: 'width', Fmin: 310, Fmax: 350, vMin: 360, vMax: 1170})}
-  ${adaptiveValue({value: 'height', Fmin: 380, Fmax: 430, vMin: 360, vMax: 1170})}
+  ${generateAdaptiveStyles({
+    property: 'width',
+    startSize: 350,
+    minSize: 310,
+    widthFrom: 1170,
+    widthTo: 360,
+    keepSize: 1
+
+  })}
+  ${generateAdaptiveStyles({
+    property: 'height',
+    startSize: 430,
+    minSize: 380,
+    widthFrom: 1170,
+    widthTo: 360,
+    keepSize: 1
+  })}
   &::before {
     content: '';
     position: absolute;
