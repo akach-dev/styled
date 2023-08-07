@@ -1,14 +1,22 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
 
 const Contact = styled.section`
+  ${generateAdaptiveStyles({
+    property: 'padding-bottom',
+    startSize: 110,
+    minSize: 80,
+    widthFrom: 1170,
+    keepSize: 1,
+  })}
   h2:not(:last-child) {
     margin-bottom: 2.25em;
   }
 `
 const Form = styled.form`
   position: relative;
-  
+
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
