@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
 
 const Work = styled.div`
 `
@@ -87,6 +88,13 @@ const Body = styled.div`
 `
 
 const Works = styled.section`
+  ${generateAdaptiveStyles({
+    property: 'padding-bottom',
+    startSize: 108,
+    minSize: 80,
+    widthFrom: 1170,
+    keepSize: 1,
+  })}
   ${FlexWrapper} {
     gap: 30px;
   }
