@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {font} from "../../../assets/adaptiveValue";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {generateAdaptiveStyles} from "../../../assets/generateAdaptiveStyles";
+import {generateAdaptiveStyles, rem} from "../../../assets/generateAdaptiveStyles";
 
 const Hero = styled.section`
   min-height: 100vh;
@@ -74,7 +74,7 @@ const HeroBody = styled.div`
 `
 
 const HeroHi = styled.span`
-  font-size: 0.875rem;
+  font-size: ${rem(14)};
   display: inline-block;
 `
 
@@ -100,7 +100,7 @@ const HeroTitle = styled.h3`
       z-index: -1;
       bottom: 0;
       left: 0;
-      height: 20px;
+      height: 30%;
       width: 100%;
       background-color: ${theme.colors.accent};
     }
@@ -108,8 +108,12 @@ const HeroTitle = styled.h3`
 `
 
 const HeroSubTitle = styled.h1`
-  font-size: 1.6875rem;
-
+  ${generateAdaptiveStyles({
+    property: 'font-size',
+    startSize: 27,
+    minSize: 20,
+    widthFrom: 1140,
+  })}
   p {
     display: none;
   }
