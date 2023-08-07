@@ -6,6 +6,7 @@ import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {IconWrapper} from "../../../components/IconWrapper";
+import {em} from "../../../assets/generateAdaptiveStyles";
 
 export const Testimony: FC = () => {
   return (
@@ -24,6 +25,7 @@ export const Testimony: FC = () => {
 };
 
 const StyledTestimony = styled.section`
+  padding-bottom: ${em(80)};
   position: relative;
   background: #252527;
 
