@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
+import {generateAdaptiveStyles, rem} from "../assets/generateAdaptiveStyles";
 
 export const GlobalStyled = createGlobalStyle`
   body {
@@ -53,8 +54,12 @@ export const GlobalStyled = createGlobalStyle`
   }
 
   section {
-    padding: 100px 0;
-
+    ${generateAdaptiveStyles({
+      property: 'padding-top',
+      startSize: 100,
+      minSize: 80,
+      keepSize: 1,
+    })}
     h2:not(:last-child) {
       margin-bottom: 2.25em;
     }
@@ -86,12 +91,12 @@ export const GlobalStyled = createGlobalStyle`
 
 
   p {
-    font-size: 0.875rem;
+    font-size: ${rem(14)};
     line-height: 1.4;
   }
 
   small {
-    font-size: 1rem;
+    font-size: ${rem(16)};
   }
 
   img {

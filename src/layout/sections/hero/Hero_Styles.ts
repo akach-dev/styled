@@ -7,10 +7,13 @@ import {generateAdaptiveStyles, rem} from "../../../assets/generateAdaptiveStyle
 const Hero = styled.section`
   min-height: 100vh;
   display: flex;
+  
   ${generateAdaptiveStyles({
-    property: 'padding-top',
-    startSize: 100,
-    minSize: 80
+    property: 'padding-bottom',
+    startSize: 140,
+    minSize: 80,
+    widthFrom: 1170,
+    keepSize: 1,
   })}
 `
 const HeroContainer = styled(Container)`
@@ -85,7 +88,6 @@ const HeroTitle = styled.h3`
     Fmax: 50,
     Fmin: 30
   })};
-
   letter-spacing: 0.05em;
 
   span {
