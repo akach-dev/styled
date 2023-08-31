@@ -97,12 +97,11 @@ export const Works: FC = () => {
       break;
   }
 
-
-  const changeFilterStatus = (value: 'all' | 'loading' | 'react' | 'spa') => setCurrentFilterStatus(value)
+  const changeFilterStatus = (value: FilterStatusType) => setCurrentFilterStatus(value)
 
   return (
 
-     
+
      <S.Works id={'works'}>
        <Container>
          <Title>My Works</Title>
